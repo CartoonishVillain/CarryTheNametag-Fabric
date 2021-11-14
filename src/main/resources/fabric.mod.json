@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.cartoonishvillain.CarryNametag.ExampleMod"
+      "com.cartoonishvillain.CarryNametag.CarryTheNametag"
     ]
   },
   "mixins": [
