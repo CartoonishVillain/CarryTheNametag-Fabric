@@ -23,8 +23,15 @@ public class CarryTheNametag implements ModInitializer {
 	}
 
 	public static void doRename(Animal animal1, Animal animal2, AgeableMob ageableMob){
-		TextComponent componentcustomName1 = (TextComponent) animal1.getCustomName();
-		TextComponent componentcustomName2 = (TextComponent) animal2.getCustomName();
+		TextComponent componentcustomName1;
+		TextComponent componentcustomName2;
+
+		try {
+			componentcustomName1 = (TextComponent) animal1.getCustomName();
+			componentcustomName2 = (TextComponent) animal2.getCustomName();
+		} catch (ClassCastException e) {
+			return;
+		}
 
 		if(componentcustomName1 != null && componentcustomName2 != null) {
 			String customName1 = componentcustomName1.getText();
